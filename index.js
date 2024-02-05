@@ -1,12 +1,19 @@
-function receivesAFunction(callback){
-    callback()
+function receivesAFunction(porepore){
+    console.log("Nimesema")
+    porepore()
 }
-function returnsANamedFunction(){
-    return function namedFunction(){
+receivesAFunction(()=>console.log("iza mzing"))
 
+const returnsANamedFunction=()=>{
+    return function named(){
+        console.log("ni kutuff")
     }
 }
-function returnsAnAnonymousFunction(){
-    return function() {}
-    }
+returnsANamedFunction()
 
+const returnsAnAnonymousFunction=()=>{
+    return function (){
+        console.log("ni kutuff")
+    }
+}
+returnsAnAnonymousFunction()
